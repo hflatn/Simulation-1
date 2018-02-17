@@ -1,0 +1,34 @@
+
+
+.flexin {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 20px;
+    
+}
+
+.boxy {
+    display: flex;
+    align-items: center;
+    
+    background-color: #d34735;
+    height: 60px;
+    width: 500px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+
+.boxy-text {
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 700px;
+    color:white;
+    margin-left: 100px;
+}
+
+.white {
+    color: white;
+}
