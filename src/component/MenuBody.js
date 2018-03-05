@@ -19,7 +19,7 @@ export default class MenuBody extends Component {
                
                 <div className='boxy'>
                     <div className='boxy-text'>
-                        <Link to='./shelfA' style={{textDecoration: 'none'}}> <span> Shelf A  </span> </Link>  </div>
+                        <Link to='./shelfA'> <span> Shelf A  </span> </Link>  </div>
                 </div>
                 
                 <div className='boxy'>
@@ -39,7 +39,6 @@ export default class MenuBody extends Component {
                 </div>
             </div>
 </div>
-
         )
     }
 }

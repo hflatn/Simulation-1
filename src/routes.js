@@ -8,7 +8,7 @@ import shelfD from './component/shelf/shelfD.js';
 
 export default (
     <Switch>
-        <Route component={MenuBody} path ='/' exact />
+        <Route component={MenuBody} path ='/main/:shelf' exact />
         <Route component={shelfA} path = '/shelfA' />
         <Route component={shelfB} path = '/shelfB' />
         <Route component={shelfC} path = '/shelfC' />

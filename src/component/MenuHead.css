@@ -2,7 +2,7 @@
 .Nav {
 background-color: #ab2a19;
     width: 100vw;
-    height: 14.33vh;
+    height: 10.75vh;
     position: relative;
  display: flex;
  flex-direction: row;
@@ -16,7 +16,6 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAY
  height: 68px;
  width: 68px;
  margin: 20px 10px 20px 20px;
- 
 }
 
 .shelfie {
@@ -24,5 +23,4 @@ font-weight: 700;
 color:white;
 font-size: 30px;
 margin: 0px 310px 0px 0px;
-
 }
