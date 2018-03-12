@@ -9,7 +9,6 @@ export default class MenuBody extends Component {
         super()
     }
 
-
     render() {
 
         return (
@@ -19,22 +18,22 @@ export default class MenuBody extends Component {
                
                 <div className='boxy'>
                     <div className='boxy-text'>
-                        <Link to='./shelfA'> <span> Shelf A  </span> </Link>  </div>
+                        <Link to='./shelf/Shelf A'> Shelf A  </Link>  </div>
                 </div>
                 
                 <div className='boxy'>
                     <div className='boxy-text'>
-                       <Link to='./shelfB'> Shelf B </Link>  </div>
+                       <Link to='./shelf/Shelf B'> Shelf B </Link>  </div>
                 </div>
                 
                 <div className='boxy'>
                     <div className='boxy-text'>
-                      <Link to='./shelfC'>  Shelf C </Link>  </div>
+                      <Link to='./shelf/Shelf C'>  Shelf C </Link>  </div>
                 </div>
                
                 <div className='boxy'>
                     <div className='boxy-text'>
-                      <Link to='./shelfD'>  Shelf D </Link> </div>
+                      <Link to='./shelf/Shelf D'>  Shelf D </Link> </div>
                
                 </div>
             </div>

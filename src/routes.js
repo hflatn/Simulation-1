@@ -1,18 +1,32 @@
 import React from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-import MenuBody from './component/MenuBody.js';
-import shelfA from './component/shelf/shelfA.js';
-import shelfB from './component/shelf/shelfB.js';
-import shelfC from './component/shelf/shelfC.js';
-import shelfD from './component/shelf/shelfD.js';
+import MenuBody from './component/menu/MenuBody.js';
+import shelf from './component/shelf/shelf';
+import bin from './component/bin/bin.js';
+import create from './component/create/create.js';
 
 export default (
     <Switch>
-        <Route component={MenuBody} path ='/main/:shelf' exact />
-        <Route component={shelfA} path = '/shelfA' />
-        <Route component={shelfB} path = '/shelfB' />
-        <Route component={shelfC} path = '/shelfC' />
-        <Route component={shelfD} path = '/shelfD' />
-
+        <Route component={ MenuBody } path = '/home' exact />
+        <Route component={ shelf } path = '/shelf/:shelve' exact />
+        <Route component={ create } path = "shelf/:shelve/create/:id" />
+        <Route component={ bin } path= '/shelf/:shelve/bin/:id' exact />
     </Switch>
 )
+
+// conditionial rendering  
+
+// this.state = {
+//     products: [{name:'test1', show: 'hi'}]
+// }
+
+// {this.state.admin ? <div> Hey I'm an admin </div> : </div> I am not an admin </div>}
+
+// this.state.products.map((el, i, arr) => {
+//     el.show ? <div>{el.name} </div> : <div> no product for you </div>
+//     return <div> el.name </div>
+// })
+
+// this.state.products.map((el, i, arr) => {
+//     return <div className={el.show ? 'red': null}> {el.name} </div>
+// })
