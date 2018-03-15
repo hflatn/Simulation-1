@@ -7,10 +7,10 @@ import create from './component/create/create.js';
 
 export default (
     <Switch>
-        <Route component={ MenuBody } path = '/home' exact />
+        <Route component={ MenuBody } path = '/' exact />
         <Route component={ shelf } path = '/shelf/:shelve' exact />
-        <Route component={ create } path = "shelf/:shelve/create/:id" />
-        <Route component={ bin } path= '/shelf/:shelve/bin/:id' exact />
+        <Route component={ create } path = '/shelf/:shelve/create/:id' />
+        <Route component={ bin } path= '/shelf/:shelve/bin/:id'  />
     </Switch>
 )
 

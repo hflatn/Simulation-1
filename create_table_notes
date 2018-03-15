@@ -4,7 +4,7 @@ Insert Into bin(shelf, name, price)
 values ('b','yellow',44)
 
 create table bin (
-id SERIAL PRIMARY KEY NOT NULL,
+id INT NOT NULL,
 shelf varchar(40) NOT NULL,
 name varchar(40) NOT NULL,
 price INT NOT NULL

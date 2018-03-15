@@ -1,14 +1,14 @@
 module.exports = {
     create: ( req, res, next) => {
         const dbInstance = req.app.get('db');
-        const { name, price} = req.body
-
-        console.log(req.body);
-        
-
-        dbInstance.add_bin([ name, price ])
+        const { params } = req;
+         const num = Number(params.id)
+    
+        dbInstance.add_bin([params.id, params.shelve, req.body.name, req.body.value])
             .then( () => res.status(200).send() )
-            .catch( () => res.status(500).send() )
+            .catch( (err) => { (console.log(err, "create error"))
+            res.status(500).send()} )
+            console.log([params.shelve, params.id, req.body])
     },
 
     // /api/:shelve/:id
@@ -29,19 +29,24 @@ module.exports = {
     update: ( req, res, next) => {
         const dbInstance = req.app.get('db');
         const { params } = req;
-
-        dbInstance.update_bin( params.id, req.body)
+         const num = Number(params.id)
+    
+        dbInstance.update_bin([num, params.shelve, req.body.name, req.body.value])
             .then( () => res.status(200).send() )
-            .catch( () => res.status(500).send() )
+            .catch( (err) => { (console.log(err, "update error"))
+            res.status(500).send()} )
+            console.log([params.id, req.body])
     },
 
     delete: ( req, res, next ) => {
         const dbInstance = req.app.get('db');
         const { params } = req;
 
-        dbInstance.delete_bin()
+        dbInstance.delete_bin([params.id, params.shelve])
         .then( () => res.status(200).send() )
-        .catch( () => res.status(500).send() )
+        .catch( (err) => { (console.log(err, "delete error"))
+            res.status(500).send()} )
+            console.log([])
     },
 
     getall: ( req, res, next ) => {

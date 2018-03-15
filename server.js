@@ -13,10 +13,10 @@ massive( process.env.CONNECTION_STRING ).then ( dbInstance => { console.log("dat
  app.set('db', dbInstance);
 })
 
-app.post('/api/addbin', products_controller.create);
+app.post('/api/create/:shelve/:id', products_controller.create);
 app.get('/api/getonebin/:shelve/:id', products_controller.get);
-app.put('/api/bin/:id', products_controller.update);
-app.delete('/api/bin/:id', products_controller.delete);
+app.patch('/api/:shelve/:id', products_controller.update);
+app.delete('/api/delete/:shelve/:id', products_controller.delete);
 
 app.get('/api/:shelve/getall', products_controller.getall);
 

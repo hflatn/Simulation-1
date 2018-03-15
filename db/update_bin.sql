@@ -1,4 +1,3 @@
-UPDATE bin 
-set name = $2, Price = $3
-select * from bin
-where id = $1;
+UPDATE bin
+set name = $3, price = $4
+where id = $1 and shelf = $2;
